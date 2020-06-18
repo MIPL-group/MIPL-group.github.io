@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Demo1</title>
+		<title>Demo: Place Order</title>
 		<!-- 3rd party libraries begin -->
 
 		<!-- import Vue -->
@@ -134,16 +134,13 @@ order_form.tmp_product_name=order_form.tmp_product_type=order_form.tmp_product_i
 										<el-button type="primary" @click="()=>{this.tab_active_tab='tab_user_info';this.main_step_progress--}">< Previous</el-button>
 									</el-col>
 									<el-col :span="6" :offset="12">
-										<el-button type="primary" @click="()=>{this.tab_active_tab='tab_address';this.main_step_progress++}">Next ></el-button>
+										<el-button type="primary" @click="()=>{this.tab_active_tab='tab_success';this.main_step_progress++}">Next ></el-button>
 									</el-col>
 								</el-row>
 							</el-tab-pane>
-							<el-tab-pane disabled  name="tab_address">
-								<h2>Address, to be designed</h2>
+							<el-tab-pane disabled  name="tab_success">
+								<h2>Success!</h2>
 								<el-button type="primary" @click="()=>{this.tab_active_tab='tab_products';this.main_step_progress--}">< Previous</el-button>
-							</el-tab-pane>
-							<el-tab-pane disabled name="tab_confirmation">
-
 							</el-tab-pane>
 						</el-tabs>
 					</el-col>

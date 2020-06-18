@@ -139,6 +139,36 @@ order_form.tmp_product_name=order_form.tmp_product_type=order_form.tmp_product_i
 							</el-tab-pane>
 							<el-tab-pane disabled  name="tab_success">
 								<h2>Success!</h2>
+								<h2>
+									Order Information:
+								</h2>
+								<p>Name: {{order_form.name}}</p>
+								<p>Address: {{order_form.address}}</p>
+								<p>Products:</p>
+								<el-table
+										:data="order_form.products"
+										height="250"
+										border
+										style="width: 100%">
+									<el-table-column
+											prop="id"
+											label="Product ID"
+											width="180">
+									</el-table-column>
+									<el-table-column
+											prop="name"
+											label="Product Name"
+											width="180">
+									</el-table-column>
+									<el-table-column
+											prop="type"
+											label="Product type">
+									</el-table-column>
+									<el-table-column
+											prop="count"
+											label="Count">
+									</el-table-column>
+								</el-table>
 								<el-button type="primary" @click="()=>{this.tab_active_tab='tab_products';this.main_step_progress--}">< Previous</el-button>
 							</el-tab-pane>
 						</el-tabs>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Demo1</title>
+		<!-- 3rd party libraries begin -->
+
+		<!-- import Vue -->
+		<script src="js/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!-- import ElementUI css files -->
+		<link rel="stylesheet" href="css/element-ui/index.css">
+		<!-- import ElementUI js files -->
+		<script src="js/element-ui/index.js"></script>
+		<!-- import axios -->
+		<script src="js/axios/axios.min.js"></script>
+
+		<!-- 3rd party libraries end -->
+
+		<!-- page files start -->
+
+		<!-- page css -->
+		<link rel="stylesheet" href="css/index.css">
+		<!-- page js -->
+	</head>
+	
+	<body>
+	<div id="app">
+		<el-container>
+			<el-header>
+				<h1 style="display: inline">Online Shop</h1>
+			</el-header>
+			<el-main>
+				<el-row>
+					<el-col :span="4"><p></p></el-col>
+					<el-col :span="16">
+						<!-- progress bar -->
+						<el-steps :active="main_step_progress" finish-status="success" align-center>
+							<el-step title="User Information"></el-step>
+							<el-step title="Products"></el-step>
+							<el-step title="Address"></el-step>
+							<el-step title="Confirmation"></el-step>
+						</el-steps>
+						<!-- multiple tabs -->
+						<el-tabs v-model="tab_active_tab">
+							<el-tab-pane disabled name="tab_user_info">
+								<h2>User Information</h2>
+								<el-form :model="order_form" :rules="order_form_rules" ref="order_form" size="medium">
+									<el-form-item label="Name:" prop="name">
+										<el-input v-model="order_form.name"></el-input>
+									</el-form-item>
+									<el-form-item label="Address:" prop="address">
+										<el-input v-model="order_form.address"></el-input>
+									</el-form-item>
+									<el-form-item>
+										<el-button type="primary" @click="{tab_active_tab='tab_products';main_step_progress++}">Next ></el-button>
+									</el-form-item>
+								</el-form>
+							</el-tab-pane>
+							<el-tab-pane disabled name="tab_products">
+								<h2>Products Information</h2>
+								<el-form :model="order_form" :rules="order_form_rules" ref="order_form" size="medium">
+									<el-row>
+										<el-col :span="8">
+											<el-form-item label="Product ID">
+												<el-input v-model="order_form.tmp_product_id" style="width: 60%"> </el-input>
+											</el-form-item>
+										</el-col>
+										<el-col :span="8">
+											<el-form-item label="Product Name" width="1em">
+												<el-input v-model="order_form.tmp_product_name" style="width: 60%"> </el-input>
+											</el-form-item>
+										</el-col>
+										<el-col :span="8">
+											<el-form-item label="Product Type">
+												<el-select v-model="order_form.tmp_product_type" placeholder="Please select type">
+													<el-option key="1" label="type 1" value="type 1"></el-option>
+													<el-option key="2" label="type 2" value="type 2"></el-option>
+													<el-option key="3" label="type 3" value="type 3">
+												</el-select>
+											</el-form-item>
+										</el-col>
+									</el-row>
+									<el-row>
+										<el-col :span="8">
+											<el-form-item label="Product Type">
+												<el-input-number v-model="order_form.tmp_product_count" :min="1">
+											</el-input-number>
+											</el-form-item>
+										</el-col>
+										<el-col :span="8">
+											<el-button type="primary" @click="()=>{order_form.products.push({id:order_form.tmp_product_id,name:
+											order_form.tmp_product_name,count:order_form.tmp_product_count,type:order_form.tmp_product_type});
+order_form.tmp_product_name=order_form.tmp_product_type=order_form.tmp_product_id='';order_form.tmp_product_count=1}">
+											Add
+											</el-button>
+										</el-col>
+									</el-row>
+									<el-table
+											:data="order_form.products"
+											style="width: 100%">
+										<template slot="empty">
+											No product yet
+										</template>
+										<el-table-column
+												prop="id"
+												label="Product ID">
+										</el-table-column>
+										<el-table-column
+												prop="name"
+												label="Product Name">
+										</el-table-column>
+										<el-table-column
+												prop="type"
+												label="Product Type">
+										</el-table-column>
+										<el-table-column
+												prop="count"
+												label="Product count">
+										</el-table-column>
+										<el-table-column
+												align="right">
+											<template slot-scope="scope">
+												<el-button
+														size="mini"
+														type="danger"
+														@click="order_form.products.splice(scope.$index,1)">Delete</el-button>
+											</template>
+										</el-table-column>
+									</el-table>
+								</el-form>
+								<br>
+								<el-row>
+									<el-col :span="6">
+										<el-button type="primary" @click="()=>{this.tab_active_tab='tab_user_info';this.main_step_progress--}">< Previous</el-button>
+									</el-col>
+									<el-col :span="6" :offset="12">
+										<el-button type="primary" @click="()=>{this.tab_active_tab='tab_address';this.main_step_progress++}">Next ></el-button>
+									</el-col>
+								</el-row>
+							</el-tab-pane>
+							<el-tab-pane disabled  name="tab_address">
+								<h2>Address, to be designed</h2>
+								<el-button type="primary" @click="()=>{this.tab_active_tab='tab_products';this.main_step_progress--}">< Previous</el-button>
+							</el-tab-pane>
+							<el-tab-pane disabled name="tab_confirmation">
+
+							</el-tab-pane>
+						</el-tabs>
+					</el-col>
+					<el-col :span="4"><p></p></el-col>
+				</el-row>
+			</el-main>
+		</el-container>
+	</div>
+	</body>
+
+	<!--- page script--->
+	<script src="js/index.js"></script>
+</html>

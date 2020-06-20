@@ -1,0 +1,519 @@
+{
+    "Artifical intelligence":[
+        {
+            "ranking" : "1",
+            "name" : "Carnegie Mellon University",
+            "Count" : 54,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Tuomas Sandholm",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Fei Fang",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "J.Andrew Bagnell",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        },
+        {
+            "ranking" : "2",
+            "name" : "Harvard University",
+            "Count" : 50,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Ariel D.P",
+                    "Pubs": 48,
+                    "Adj": 12.9,
+                    "href": "https://teamcore.seas.harvard.edu/tambe"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Harvard Tang",
+                    "Pubs": 19,
+                    "Adj": 3.56,
+                    "href": "https://www.andreiod.cmu.edu/user/Harvard Tang"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "J.Andrew Bagnell",
+                    "Pubs": 15,
+                    "Adj": 2.231,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=8989"
+                }
+            ]
+        },
+        {
+            "ranking" : "3",
+            "name" : "Shanghai Jiao Tong University",
+            "Count" : 46,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Xinyu Wang",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Baiyu Yang",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Pengyuan Huang",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        }
+    ],
+    "Computer Vision":[
+        {
+            "ranking" : "1",
+            "name" : "Harvard University",
+            "Count" : 46,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Ariel D.P",
+                    "Pubs": 48,
+                    "Adj": 12.9,
+                    "href": "https://teamcore.seas.harvard.edu/tambe"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Harvard Tang",
+                    "Pubs": 19,
+                    "Adj": 3.56,
+                    "href": "https://www.andreiod.cmu.edu/user/Harvard Tang"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "J.Andrew Bagnell",
+                    "Pubs": 15,
+                    "Adj": 2.231,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=8989"
+                }
+            ]
+        },
+        {
+            "ranking" : "2",
+            "name" : "Carnegie Mellon University",
+            "Count" : 42,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Tuomas Sandholm",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Fei Fang",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "J.Andrew Bagnell",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        },
+        
+        {
+            "ranking" : "3",
+            "name" : "Shanghai Jiao Tong University",
+            "Count" : 40,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Xinyu Wang",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Baiyu Yang",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Pengyuan Huang",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        }
+    ],
+    "Machine Learning":[
+        {
+            "ranking" : "1",
+            "name" : "Shanghai Jiao Tong University",
+            "Count" : 77,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Xinyu Wang",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Baiyu Yang",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Pengyuan Huang",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        },
+        {
+            "ranking" : "2",
+            "name" : "Harvard University",
+            "Count" : 70,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Ariel D.P",
+                    "Pubs": 48,
+                    "Adj": 12.9,
+                    "href": "https://teamcore.seas.harvard.edu/tambe"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Harvard Tang",
+                    "Pubs": 19,
+                    "Adj": 3.56,
+                    "href": "https://www.andreiod.cmu.edu/user/Harvard Tang"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "J.Andrew Bagnell",
+                    "Pubs": 15,
+                    "Adj": 2.231,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=8989"
+                }
+            ]
+        },
+        {
+            "ranking" : "3",
+            "name" : "Carnegie Mellon University",
+            "Count" : 46,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Tuomas Sandholm",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Fei Fang",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "J.Andrew Bagnell",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        }
+    ],
+    "Computer Architecture":[
+        {
+            "ranking" : "1",
+            "name" : "Carnegie Mellon University",
+            "Count" : 146,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Pengyuan Huang",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Yuetao Li",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Rui Dong",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        },
+        {
+            "ranking" : "2",
+            "name" : "Harvard University",
+            "Count" : 126,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Ariel D.P",
+                    "Pubs": 48,
+                    "Adj": 12.9,
+                    "href": "https://teamcore.seas.harvard.edu/tambe"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Harvard Tang",
+                    "Pubs": 19,
+                    "Adj": 3.56,
+                    "href": "https://www.andreiod.cmu.edu/user/Harvard Tang"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "J.Andrew Bagnell",
+                    "Pubs": 15,
+                    "Adj": 2.231,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=8989"
+                }
+            ]
+        },
+        {
+            "ranking" : "3",
+            "name" : "Shanghai Jiao Tong University",
+            "Count" : 110,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Xinyu Wang",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Baiyu Yang",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Pengyuan Huang",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        }
+    ],
+    "Computer Network":[
+        {
+            "ranking" : "1",
+            "name" : "Carnegie Mellon University",
+            "Count" : 96,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Xinyu Wang",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "John Reese",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Harold Finch",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        },
+        {
+            "ranking" : "2",
+            "name" : "Harvard University",
+            "Count" : 86,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Root",
+                    "Pubs": 48,
+                    "Adj": 12.9,
+                    "href": "https://teamcore.seas.harvard.edu/tambe"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Joss Carter",
+                    "Pubs": 19,
+                    "Adj": 3.56,
+                    "href": "https://www.andreiod.cmu.edu/user/Harvard Tang"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Lionel Fusco",
+                    "Pubs": 15,
+                    "Adj": 2.231,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=8989"
+                }
+            ]
+        },
+        {
+            "ranking" : "3",
+            "name" : "Shanghai Jiao Tong University",
+            "Count" : 76,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Sam Groves",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Sameen Shaw",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Pengyuan Huang",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        }
+    ],
+    "Databases":[
+        {
+            "ranking" : "1",
+            "name" : "Carnegie Mellon University",
+            "Count" : 43,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Leon Tao",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Nicholas Donnelly",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Carl Elias",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        },
+        {
+            "ranking" : "2",
+            "name" : "Harvard University",
+            "Count" : 26,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Nathan Ingram",
+                    "Pubs": 48,
+                    "Adj": 12.9,
+                    "href": "https://teamcore.seas.harvard.edu/tambe"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Grace Hendricks",
+                    "Pubs": 19,
+                    "Adj": 3.56,
+                    "href": "https://www.andreiod.cmu.edu/user/Harvard Tang"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Zoe Morgan",
+                    "Pubs": 15,
+                    "Adj": 2.231,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=8989"
+                }
+            ]
+        },
+        {
+            "ranking" : "3",
+            "name" : "Shanghai Jiao Tong University",
+            "Count" : 26,
+            "faculty" : [
+                {
+                    "ranking" : "1",
+                    "name" : "Anthony Marconi",
+                    "Pubs": 33,
+                    "Adj": 12.9,
+                    "href": "http://www.cs.cmu.edu/~sandholm"
+                },
+                {
+                    "ranking": "2",
+                    "name" : "Ross Garrison",
+                    "Pubs": 19,
+                    "Adj": 3.7,
+                    "href": "https://www.andrew.cmu.edu/user/feif"
+                },
+                {
+                    "ranking": "3",
+                    "name" : "Denton Weeks",
+                    "Pubs": 10,
+                    "Adj": 2.6,
+                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                }
+            ]
+        }
+    ]
+}

@@ -26,14 +26,14 @@
 	<body>
 
 
-	<div>
+	<div id="app2">
 		<el-container>
 			<el-header>
 				<h1 style="display: inline">CS Ranking</h1>
             </el-header>
             <el-aside width="200px">
                 <el-row>
-                    <div id="app2">
+                    <div id="Research Fields">
                         <table v-for="direction in Directions" :key="direction.name">
                             <thead>
                                 <tr>
@@ -64,7 +64,7 @@
                 </el-row>
             </el-aside>
 			<el-main>
-				<div id="app2">
+				<div id="Ranking Results">
                     <table class = "table table-fit table-sm table-striped", id="ranking" valign="top">
                         <thead>
                             <tr><th align="left"><font color="#777">#</font></th><th align="left"><font color="#777">Institution</font></th><th align="right"><abbr title="Geometric mean count of papers published across all areas."><font color="#777">Count</font></abbr></th><th align="right">&nbsp;<abbr title="Number of faculty who have published in these areas."><font color="#777">Faculty</font></abbr></th></tr>

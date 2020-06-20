@@ -30,7 +30,7 @@ var vm2 = new Vue(
         methods: {
             check: function(e){
                 console.log(this.checkedFields);
-                fetch('./rankings.json')
+                fetch('./data/rankings.json')
                     .then((response) => {
                         return response.json();
                     })

@@ -1,6 +1,6 @@
 var vm2 = new Vue(
     {
-        el: '#app2',
+        el: '#app',
         data:{
             checkedFields:[],
             Directions :[
@@ -38,7 +38,7 @@ var vm2 = new Vue(
                         var i = 0;
                         for(i=0; i < this.checkedFields.length;i++){
                             var field = this.checkedFields[i];
-                            this.output.push(data.field);
+                            this.output.push(data[field]);
                         }
                     })
             }

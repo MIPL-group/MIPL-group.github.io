@@ -43,19 +43,17 @@
                                 </th>
                             </tr>
                         </thead>
-                        <table v-for="direction in Directions" :key="direction.name">
-                            <tbody>
-                                <template v-for = "field in direction.fields" :key="field.name">
-                                    <tr>
-                                        <label for="direction.name">
-                                            {{field.name}}
-                                        </label>
-                                        <input type="checkbox" name="direction.name" id="direction.name"
-                                        :value="field.name" v-model="checkedFields" @change="check($event)" :key="field.name">
-                                    </tr>
-                                </template>
-                            </tbody>
-                        </table>
+                        <tbody>
+                            <template v-for = "field in direction.fields" :key="field.name">
+                                <tr>
+                                    <label for="direction.name">
+                                        {{field.name}}
+                                    </label>
+                                    <input type="checkbox" name="direction.name" id="direction.name"
+                                    :value="field.name" v-model="checkedFields" @change="check($event)" :key="field.name">
+                                </tr>
+                            </template>
+                        </tbody>
                     </table>
                 </el-row>
             </el-aside>

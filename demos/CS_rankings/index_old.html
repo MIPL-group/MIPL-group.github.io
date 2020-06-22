@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Demo: CS_rankings</title>
+		<!-- 3rd party libraries begin -->
+
+		<!-- import Vue -->
+		<script src="js/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!-- import ElementUI css files -->
+		<link rel="stylesheet" href="css/element-ui/index.css">
+		<!-- import ElementUI js files -->
+		<script src="js/element-ui/index.js"></script>
+		<!-- import axios -->
+		<script src="js/axios/axios.min.js"></script>
+
+		<!-- 3rd party libraries end -->
+
+		<!-- page files start -->
+
+		<!-- page css -->
+		<link rel="stylesheet" href="css/index.css">
+		<!-- page js -->
+    </head>
+	
+	<body>
+
+
+	<div id="app">
+		<el-container>
+			<el-header>
+				<h1 style="display: inline">CS Ranking</h1>
+            </el-header>
+            <el-aside width="200px">
+                <el-row>
+                    <table v-for="direction in Directions">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <p class="text-muted">{{direction.name}}
+                                        [<a class="area_group_selector" :id="direction.off_id">off</a> | <a class="area_group_selector" :id="direction.on_id">on</a>]
+                                        </p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template v-for = "field in direction.fields">
+                                <tr>
+                                    <label for="direction.name">
+                                        {{field.name}}
+                                    </label>
+                                    <input type="checkbox" name="direction.name" id="direction.name"
+                                    :value="field.name" v-model="checkedFields" @change="check($event)">
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </el-row>
+            </el-aside>
+			<el-main>
+                <table class = "table table-fit table-sm table-striped", id="ranking" valign="top">
+                    <thead>
+                        <tr><th align="left"><font color="#777">#</font></th><th align="left"><font color="#777">Institution</font></th><th align="right"><abbr title="Geometric mean count of papers published across all areas."><font color="#777">Count</font></abbr></th><th align="right">&nbsp;<abbr title="Number of faculty who have published in these areas."><font color="#777">Faculty</font></abbr></th></tr>
+                    </thead>
+                    <template v-for="university in output">
+                        <tbody>
+                            <tr>
+                                    <td>
+                                        {{university.ranking}}&nbsp;
+                                    </td>
+                                    <td>
+                                        &nbsp;{{university.name}}&nbsp;
+                                    </td>
+                                    <td align="right">{{university.count}}</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="display: block" :id="university.name -faculty">
+                                        <div class="table">
+                                            <table class="table table-sm table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <td>
+                                                            <small>
+                                                                <em>
+                                                                    <abbr title="Click on an author's name to go to their home page.">Faculty
+
+                                                                    </abbr>
+                                                                </em>
+                                                            </small>
+                                                        </td>
+                                                        <td align="right">
+                                                            <small>
+                                                                <em>&nbsp;&nbsp;
+                                                                    <abbr title="Total number of publications (click for DBLP entry).">#&nbsp;Pubs
+
+                                                                    </abbr> 
+                                                                </em>
+                                                            </small>
+                                                        </td>
+                                                        <td align="right">
+                                                            <small>
+                                                                <em>
+                                                                    <abbr title="Count divided by number of co-authors">Adj.&nbsp;#
+
+                                                                    </abbr>
+                                                                </em>
+                                                            </small>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <template v-for="faculty in university.faculty">
+                                                        <tr>
+                                                            <td>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                            </td>
+                                                            <td>
+                                                                <small>
+                                                                    <a title="Click for author's home page." target="_blank" href="faculty.href">
+                                                                        {{faculty.name}}
+                                                                    </a>&nbsp;
+                                                                </small>
+                                                            </td>
+                                                            <td align="right">
+                                                                <small>
+                                                                    {{faculty.Pubs}}
+                                                                </small>
+                                                            </td>
+                                                            <td align="right">
+                                                                <small>
+                                                                    {{faculty.Adj}}
+                                                                </small>
+                                                            </td>
+                                                        </tr>
+                                                    </template>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                </template>
+                </table>
+			</el-main>
+		</el-container>
+	</div>
+	</body>
+
+	<!--- page script--->
+	<script src="js/index.js"></script>
+</html>

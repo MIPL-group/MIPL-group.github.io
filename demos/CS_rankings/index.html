@@ -24,47 +24,58 @@
     </head>
 
 	<body>
-		<div class="page-header" id="app">
-			<h1>CSRankings: Computer Science Rankings</h1>
-			<div class="row switch-xs row-centered">
-				<div class="col-centered col-xs-6 col-sm-push-6 col-sm-6 col-md-6 col-lg-6 text-center">
-					<div class="table-responsive">
-						<table>
-							<template v-for="direction in Directions">
-								<thead>
-									<tr>
-										<th colspan="2">
-											<p class="text-muted">
-												{{direction.name}}
-												[<a class="area_group_selector" :id="direction.off_id" @click='checkAll(direction, $event)'>off</a> | <a class="area_group_selector" :id="direction.on_id" @click='checkAll(direction, $event)'>on</a>]
-											</p>
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<checkboxes v-model="checkedFields" v-for="field in direction.fields" :field="field" :name="direction.name" :key="field.name"></checkboxes>	
-								</tbody>
-							</template>
-						</table>
+		<form id="rankform" name="rankform" target="_blank">
+			<div class="page-header" id="app">
+				<h1>CSRankings: Computer Science Rankings</h1>
+					<div class="row switch-xs row-centered">
+						<div class="col-centered col-xs-6 col-sm-push-6 col-sm-6 col-md-6 col-lg-6 text-center">
+							<div class="table-responsive">
+								<table class="table-fit table table-sm table-striped">
+									<template v-for="direction in Directions">
+										<thead>
+											<tr>
+												<th colspan="2">
+													<p class="text-muted">
+														{{direction.name}}
+														[<a class="area_group_selector" :id="direction.off_id" @click='checkAll(direction, $event)'>off</a> | <a class="area_group_selector" :id="direction.on_id" @click='checkAll(direction, $event)'>on</a>]
+													</p>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<template v-for="field in direction.fields">	
+												<tr>
+												    <label for="field.name">
+												        {{field.name}}
+												    </label>
+												    <input type="checkbox" :name="field.name" :id="field.name"
+												    :value="field.name" v-model="checkedFields" @change='check(field.name)'
+												    :key="field.name">
+												</tr>
+											</template>
+										</tbody>
+									</template>
+								</table>
+							</div>
+							
+						</div>
+						<div class="col-xs-6 col-sm-push-6 col-sm-6 col-md-6 col-lg-6 text-center">
+								<table class = "table table-fit table-sm table-striped" id="ranking" v-if="output.length>0" valign="top">
+									<thead>
+										<tr><th align="left"><font color="#777">#</font></th><th align="left"><font color="#777">Institution</font></th><th align="right"><abbr title="Geometric mean count of papers published across all areas."><font color="#777">Count</font></abbr></th><th align="right">&nbsp;<abbr title="Number of faculty who have published in these areas."><font color="#777">Faculty</font></abbr></th></tr>
+									</thead>
+									<tbody>
+										<template v-for="university in sortedArray">
+											<Ranking  :university = "university" :display_block="university[1]['display']" :key="university[0]"></Ranking>
+										</template>
+											
+									</tbody>
+								</table>
+						</div>
 					</div>
-					
+				
 				</div>
-				<div class="col-xs-6 col-sm-push-6 col-sm-6 col-md-6 col-lg-6 text-center">
-					<div v-if="output.length>0">
-						<table class = "table table-striped" id="ranking">
-							<thead>
-								<tr><th align="left"><font color="#777">#</font></th><th align="left"><font color="#777">Institution</font></th><th align="right"><abbr title="Geometric mean count of papers published across all areas."><font color="#777">Count</font></abbr></th><th align="right">&nbsp;<abbr title="Number of faculty who have published in these areas."><font color="#777">Faculty</font></abbr></th></tr>
-							</thead>
-							<tbody>
-								<Ranking v-for="university in sortedArray" :university = "university" :key="university[0]"></Ranking>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		
+		</form>
 	</body>
 
 	<!--- page script--->

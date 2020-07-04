@@ -76,8 +76,8 @@ var ranking_el = Vue.component('Ranking', {
 	    	<td>
 			{{university[1].ranking+1}}&nbsp;
 			</td>
-			<span v-if="display_block" class="hovertip" @click="display_block=!display_block" :id="university[1].name+'-widget'"><font color="blue">▼</font></span>
-			<span v-else class="hovertip" @click="display_block=!display_block" :id="university[1].name+'-widget'"><font color="blue">►</font></span>
+			<span v-if="display_block" class="hovertip" @click="display_block=!display_block" :id="university[0]+'-widget'"><font color="blue">▼</font></span>
+			<span v-else class="hovertip" @click="display_block=!display_block" :id="university[0]+'-widget'"><font color="blue">►</font></span>
 			<td>
 			{{university[0]}}&nbsp;
 			</td>

@@ -41,7 +41,7 @@ var faculty_show = Vue.component('show_faculty', {
 	<tr>
 	<td colspan="4">
 		<div v-if="display_block">
-			<div class="table">
+			<div class="table" :id="university[0]+'-faculty'">
 				<table class="table table-sm table-striped">
 				<thead><tr><th></th><td><small><em><abbr title="Click on an author's name to go to their home page.">Faculty</abbr></em></small></td><td align="right"><small><em>&nbsp;&nbsp;<abbr title="Total number of publications (click for DBLP entry).">#&nbsp;Pubs</abbr> </em></small></td><td align="right"><small><em><abbr title="Count divided by number of co-authors">Adj.&nbsp;#</abbr></em></small></td></tr></thead>
 				<faculty v-for="faculty in university[1].faculty" :faculty="faculty" :key="faculty.name"></faculty>
@@ -88,7 +88,7 @@ var ranking_el = Vue.component('Ranking', {
             {{university[1].faculty.length}}
             </td>
 		</tr>
-		<show_faculty :university="university" :display_block="display_block" :id="university[0]-faculty"></show_faculty>
+		<show_faculty :university="university" :display_block="display_block"></show_faculty>
 	</div>
 	  `
 })

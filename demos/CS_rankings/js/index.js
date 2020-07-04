@@ -88,7 +88,7 @@ var ranking_el = Vue.component('Ranking', {
             {{university[1].faculty.length}}
             </td>
 		</tr>
-		<show_faculty :university="university" :display_block="display_block"></show_faculty>
+		<show_faculty :university="university" :display_block="display_block" :id="university[0]-faculty"></show_faculty>
 	</div>
 	  `
 })

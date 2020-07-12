@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Demo: Google Scholar</title>
+		<!-- 3rd party libraries begin -->
+
+		<!-- import Vue -->
+		<script src="js/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!-- import ElementUI css files -->
+		<link rel="stylesheet" href="css/element-ui/index.css">
+		<!-- import ElementUI js files -->
+		<script src="js/element-ui/index.js"></script>
+		<!-- import axios -->
+		<script src="js/axios/axios.min.js"></script>
+		
+		<!-- 3rd party libraries end -->
+
+		<!-- page files start -->
+
+		<!-- page css -->
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	
+	<body>
+		<div id="app">
+			<el-container>
+				<el-header>
+					<el-link :underline="false" @click="function(){show_result_area = false; show_search_area = true; cur_page = 1; display_results = []}" style="font-size: 20px;">
+						Home
+					</el-link>
+				</el-header>
+
+				<el-main>
+					<template v-if="show_search_area">
+						<el-row justify="center" align="center" type="flex">
+							<h1>
+								Search Articles
+							</h1>
+						</el-row>
+						
+						<el-row justify="center" align="center" type="flex">
+							<el-form :inline="true">
+								<el-form-item>
+									<el-input v-model="search_title" style="width: 400px" placeholder="Please input the title"></el-input>
+								</el-form-item>
+								<el-form-item>
+									<el-button v-on:click="function(){search();show_result_area = true; show_search_area = false;}" type="primary">search</el-button>
+								</el-form-item>
+							</el-form>
+						</el-row>
+					</template>
+					<template v-if="show_result_area">
+						<h1 style="text-align: center">
+							Results
+						</h1>
+						<div v-for="r in display_results" align="center">
+							<el-card class="box-card" style="width: 480px; margin-bottom: 10px">
+							  <div slot="header" class="clearfix">
+							    <span><h2>{{r.Title}}</h2></span>
+							  </div>
+							  <table border="0">
+								 <tr v-for="(value,key) in r" class="text item">
+								 <td style="text-align: left; width: 300px"> <b>{{key}}</b> </td> <td style="text-align: left; width: 200px"> {{value}}</td>
+								 </tr> 
+							  </table>
+							</el-card>
+						</div>
+							<el-pagination align="center"
+							   layout="prev, pager, next"
+							   :total="50"
+							   :current-page.sync="cur_page"
+							   @current-change="page_change"
+							   >
+							 </el-pagination>
+					</template>
+					
+				</el-main>
+
+				<el-footer>
+
+				</el-footer>
+			</el-container>
+		</div>
+	</body>
+
+	<!--- page script--->
+	<script src="js/index.js"></script>
+</html>

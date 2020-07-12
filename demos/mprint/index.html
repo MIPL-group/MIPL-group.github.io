@@ -1,1 +1,119 @@
+<div id="tab_content_options" class="tab_content active" style="display: block;">
+					<div class="modal_header">
+						<h2>Print Options</h2>
+					</div>
 
+					<div class="modal_content">
+						<div id="printing_options">
+							<table>
+								<tbody><tr>
+									<th><label for="queue_form_copies">Number of Copies</label></th>
+									<th><label for="queue_form_range">Page Ranges</label></th>
+								</tr>
+								<tr>
+									<td>
+										<input id="queue_form_copies" class="small_input" name="copies" value="1" type="text">
+									</td>
+									<td>
+										<input id="queue_form_range" name="range" type="text" placeholder="e.g. 1-4,7,9-12">
+									</td>
+								</tr>
+								<tr>
+									<th><label>Orientation</label></th>
+									<th><label>Duplex Options</label></th>
+								</tr>
+								<tr>
+									<td>
+										<p><label><input name="orientation" value="portrait" type="radio" checked="checked">&nbsp;Portrait</label></p>
+										<p><label><input name="orientation" value="landscape" type="radio">&nbsp;Landscape</label></p>
+									</td>
+									<td>
+										<p><label><input name="sides" value="one-sided" type="radio">&nbsp;Single-sided</label></p>
+										<p><label><input name="sides" value="two-sided-long-edge" type="radio" checked="checked">&nbsp;Double-sided, long edge binding</label></p>
+										<p><label><input name="sides" value="two-sided-short-edge" type="radio">&nbsp;Double-sided, short edge binding</label></p>
+									</td>
+								</tr>
+								<tr>
+									<th><label>Pages Per Sheet</label></th>
+									<th><label>Scaling</label></th>
+								</tr>
+								<tr>
+									<td>
+										<select id="queue_form_pages_per_sheet" name="pages_per_sheet">
+											<option value="1" selected="selected">1</option>
+											<option value="2">2</option>
+											<option value="4">4</option>
+											<option value="6">6</option>
+											<option value="9">9</option>
+											<option value="16">16</option>
+										</select>
+									</td>
+									<td>
+										<p><label><input name="scale" id="fit_to_page" value="on" type="radio" checked="checked">&nbsp;Fit to Page</label></p>
+										<p><label><input name="scale" id="do_not_scale" value="off" type="radio" >&nbsp;Do Not Scale</label></p>
+									</td>
+								</tr>
+								<tr>
+									<th><label class="nup_layout_options">Pages Per Sheet Layout&nbsp;&nbsp</label></th>
+									<th><label class="paper_size_options">Paper Size</label></th>
+								</tr>
+								<tr>
+									<td>
+										<table class="nup_layout_options">
+											<tbody><tr>
+												<td>
+													<label><input name="nup_layout" value="btlr" type="radio" checked="checked">&nbsp;BTLR</label>
+												</td>
+												<td>
+													<label><input name="nup_layout" value="btrl" type="radio">&nbsp;BTRL</label>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<label><input name="nup_layout" value="lrbt" type="radio">&nbsp;LRBT</label>
+												</td>
+												<td>
+													<label><input name="nup_layout" value="lrtb" type="radio">&nbsp;LRTB</label>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<label><input name="nup_layout" value="rlbt" type="radio">&nbsp;RLBT</label>
+												</td>
+												<td>
+													<label><input name="nup_layout" value="rltb" type="radio">&nbsp;RLTB</label>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<label><input name="nup_layout" value="tblr" type="radio">&nbsp;TBLR</label>
+												</td>
+												<td>
+													<label><input name="nup_layout" value="tbrl" type="radio">&nbsp;TBRL</label>
+												</td>
+											</tr>
+										</tbody></table>
+									</td>
+									<td>
+										<p id="paper_size_letter" class="paper_size_options"><label><input name="size" value="letter" type="radio" checked="checked">&nbsp;Letter&nbsp;<span class="note">(8x11)</span></label></p>
+										<p id="paper_size_tabloid" class="paper_size_options" style="display: none;"><label><input name="size" value="tabloid" type="radio">&nbsp;Tabloid&nbsp;<span class="note">(11&nbsp;x&nbsp;17)</span></label></p>
+										<p id="paper_size_custom" class="paper_size_options"><label><input name="size" value="custom" type="radio">&nbsp;Custom&nbsp;<span class="note">(Width&nbsp;x&nbsp;Length)</span></label></p>
+										<p id="paper_size_custom_inputs">
+											<input class="tiny_input" name="size_width" type="text" placeholder="W">&nbsp;in
+											&nbsp;X&nbsp;
+											<input class="tiny_input" name="size_length" type="text" placeholder="L">&nbsp;in
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<div id="range_nup_warning" class="well caution"><strong>Page Range</strong> is calculated after applying all other options and counts one impression as a page.  This may produce unexpected results when using <strong>Pages Per Sheet</strong>.</div>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+					</div>
+<div class="modal_footer">
+											<button onClick="window.location.reload();">Refresh Page</button>
+					</div>
+				</div>

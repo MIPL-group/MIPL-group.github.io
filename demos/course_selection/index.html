@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="wrapper" id="explore">
+			<div class="search-main-section-container">
+			      <h2 class="text-med">Search for Courses, Instructors, and Majors.</h2>
+			      <p class="card-description text-small">Select which category you would like to search and enter course numbers, title, or keywords.</p>
+			</div>
+			
+			<div class="search-main form-group">
+			              <input id="courses" class="courses" type="button" name="option1" value="Courses" @click='click($event)'>
+			              <input id="instructors" class="instructors" type="button" name="option2" value="Instructors" @click='click($event)'>
+			              <input id="majors" class="majors" type="button" name="option3" value="Majors" @click='click($event)'>
+			</div>
+			<div class="search-main button">
+				<input class="input_box" v-model="keywords" :placeholder="[[input_text]]">
+				<button class="search" value="Search" name="Search" @click="onEnter"></button>
+			</div>  
+			
+			<div class="wrapper" v-if= "display_result">
+				<div>
+					<result_block :result = "search_result" :type = "search_type"></result_block>
+				</div>
+			 </div>
+		</div>
+	</body>
+	<!--- page script--->
+	<script src="js/index.js"></script>
+</html>

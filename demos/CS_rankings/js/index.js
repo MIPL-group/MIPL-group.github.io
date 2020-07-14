@@ -694,7 +694,7 @@ var vm = new Vue(
                     console.log(this.output);
                     this.sortedAll();
                 },
-                sortedAll: function(){
+            sortedAll: function(){
                     this.sortedOutput = {}
                     for(var i=0; i < this.output.length; i++){
                         var field_info = this.output[i];

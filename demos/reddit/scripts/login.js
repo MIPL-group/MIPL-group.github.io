@@ -1,5 +1,9 @@
 
     function onClick() {
         var name = document.getElementById("loginUsername")
-        window.location.href = "userpage/" + name.value + ".html";
+        if (name.value.length % 2 == 0) {
+            window.location.href = "userpage/" + "A" + ".html";
+        } else {
+            window.location.href = "userpage/" + "B" + ".html";
+        }
     }

@@ -9,8 +9,9 @@ div._1JBkpB_FOZMZ7IPr3FyNfH{
 div.others{
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
-      position:absolute;
-  left:50px;
-  top: 50px;
+    font-size: 30px;
+    position:absolute;
+text-indent: 50px;
+    top: 50px;
 }
+

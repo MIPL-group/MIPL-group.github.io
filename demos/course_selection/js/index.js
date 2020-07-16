@@ -1,3 +1,87 @@
+var dashboard = Vue.component('result_dashboard',{
+	created(){
+		console.log(result)
+	},
+	props:['result', 'index'],
+	template:`
+		<div class="result.name+index">
+			<a :href="result.link" v-if="result.category=='Instructors'"> {{result.name}}</a>
+			<a :href="result.link" v-else-if="result.category=='Courses'"> {{result.number}}</a>
+			<a :href="result.link" v-else>{{result.title}}</a>
+		</div>
+	`
+})
+
+var result = Vue.component('result_block', {
+	created(){
+		console.log('type', this.type)
+	},
+	props:['result', 'type'],
+	data: function(){
+			return {
+				perPage: 15,
+				currentPage: 1, 
+				startIndex: 0,
+				endIndex: 15
+			}
+	},
+	computed:{
+		totalPages(){
+			return Math.ceil(this.result.length / this.perPage)
+		}
+	},
+	components:{
+		dashboard
+	},
+	methods:{
+			pagination: function(activePage){
+				this.currentPage = activePage;
+				this.startIndex = (this.currentPage * this.perPage) - this.perPage;
+				this.endIndex = this.startIndex + this.perPage;
+			},
+			previous: function(){
+				if(this.currentPage > 1){
+					this.pagination(this.currentPage - 1);
+				}
+			},
+			next: function(){
+				if(this.currentPage < this.totalPages){
+					this.pagination(this.currentPage + 1);
+				}
+			},
+			countResult: function(){
+				var count = 0;
+				for(var index = 0; index < this.result.length; index++){
+					count++;
+				}
+				return count;
+			}
+	},
+	template:`
+		<div class="card-body">
+			  	<p class="size" >Showing results <span class="size_page" v-if="result.length <= perPage">1-{{result.length}}</span> <span class="size_page" v-else>1-{{perPage}}</span> of {{result.length}}</p>
+			  	<div v-if="countResult() > 0">
+					<div v-for="(course, index) in result" v-if="index >= startIndex && index < endIndex">
+						<result_dashboard :result="course" :index="index">
+						</result_dashboard>
+					</div>
+				</div>
+				<div v-else>
+					<p> No result</p>
+				</div>
+
+			<ul class="pagination">
+				<li class="prev" @click="previous()"><a href="#">Prev</a></li>
+				<li class="paging" v-for="num in Math.ceil(result.length/perPage)">
+					<a href="#" class="paging_num current" @click="pagination(num)">{{num}}</a>
+				</li>
+				<li class="next" @click="next()"><a href="#">Next</a></li>
+			</ul>
+			
+		</div>
+	`
+})
+
 var vm = new Vue({
 	el: '#explore',
 	data:{
@@ -93,7 +177,11 @@ var vm = new Vue({
 				candidate = candidates[i]
 				if(this.search_type=="Courses"){
 					if(candidate.number == this.keywords){
-						this.search_result.push(candidate)
+						if(candidate.number=="eecs442"){
+							for(var j=0; j < 20; j++){
+								this.search_result.push(candidate)
+							}
+						}
 					}
 				}
 				else if(this.search_type=="Instructors"){
@@ -113,69 +201,3 @@ var vm = new Vue({
 	}
 })
 
-var dashboard = Vue.component('result_dashboard',{
-	created(){
-		console.log(result)
-	},
-	props:['result', 'index'],
-	template:`
-		<div class="result.name+index">
-			<a :href="result.link" v-if="result.category=='Instructors'"> {{result.name}}</a>
-			<a :href="result.link" v-else-if="result.category=='Courses'"> {{result.number}}</a>
-			<a :href="result.link" v-else>{{result.title}}</a>
-		</div>
-	`
-})
-
-var result = Vue.component('result_block', {
-	created(){
-		console.log('type', this.type)
-	},
-	props:['result', 'type'],
-	data: function(){
-			return {
-				perPage: 15,
-				currentPage: 1, 
-				startIndex: 0,
-				endIndex: 10
-			}
-	},
-	computed:{
-		totalPages(){
-			return Math.ceil(this.result.length / this.perPage)
-		}
-	},
-	components:{
-		dashboard
-	},
-	methods:{
-			pagination: function(activePage){
-				this.currentPage = activePage;
-				this.startIndex = (this.currentPage * this.perPage) - this.perPage;
-				this.endIndex = this.startIndex + this.perPage;
-			},
-			previous: function(){
-				if(this.currentPage > 1){
-					this.pagination(this.currentPage - 1);
-				}
-			},
-			next: function(){
-				if(this.currentPage < this.totalPages){
-					this.pagination(this.currentPage + 1);
-				}
-			}
-	},
-	template:`
-		<div class="card-container">
-		  <p class="size" >Showing results <span class="size_page" v-if="result.length <= perPage">1-{{result.length}}</span> <span class="size_page" v-else>1-{{perPage}}</span> of {{result.length}}</p>
-			<div v-for="(course, index) in result" v-if="index >= startIndex && index < endIndex">
-				<result_dashboard :result="course" :index="index">
-				</result_dashboard>
-			</div>
-			<div v-else>
-				<p> No result</p>
-			</div>
-		    <ul id="pagin"><span class="first">First</span><span class="prev" style="display: none;">Prev</span><li class="paging"><a href="#" class="paging_num current">1</a></li><span class="next" style="display: none;">Next</span><span class="last">Last</span></ul>
-		  </div>
-	`
-})

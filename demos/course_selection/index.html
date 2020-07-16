@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<title></title>
+		<title>Select your favorite courses!</title>
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+	
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
 	</head>
 	<body>
-		<div class="wrapper" id="explore">
-			<div class="search-main-section-container">
-			      <h2 class="text-med">Search for Courses, Instructors, and Majors.</h2>
-			      <p class="card-description text-small">Select which category you would like to search and enter course numbers, title, or keywords.</p>
-			</div>
-			
-			<div class="search-main form-group">
-			              <input id="courses" class="courses" type="button" name="option1" value="Courses" @click='click($event)'>
-			              <input id="instructors" class="instructors" type="button" name="option2" value="Instructors" @click='click($event)'>
-			              <input id="majors" class="majors" type="button" name="option3" value="Majors" @click='click($event)'>
-			</div>
-			<div class="search-main button">
-				<input class="input_box" v-model="keywords" :placeholder="[[input_text]]">
-				<button class="search" value="Search" name="Search" @click="onEnter"></button>
-			</div>  
-			
-			<div class="wrapper" v-if= "display_result">
-				<div>
-					<result_block :result = "search_result" :type = "search_type"></result_block>
+		<div class="container" id="explore">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<h3>
+						Search for Courses, Instructors, and Majors.
+					</h3>
+					<p>
+						Select which category you would like to search and enter course numbers, title, or keywords.
+					</p>
+					<div class="btn-group">
+						<input id="courses" class="courses" type="button" name="option1" value="Courses" @click='click($event)'>
+						<input id="instructors" class="instructors" type="button" name="option2" value="Instructors" @click='click($event)'>
+						<input id="majors" class="majors" type="button" name="option3" value="Majors" @click='click($event)'>
+					</div>
+					<div class ="form-inline">
+						<div class="form-group">
+							<input class="input_box" v-model="keywords" :placeholder="[[input_text]]">
+						</div>
+						<div class="form-group">
+							<button class="btn btn-default btn-sm" @click="onEnter">Search</button>
+						</div>
+					</div> 
+					<div class="card" v-if="display_result">
+						<result_block :result = "search_result" :type = "search_type"></result_block>
+					</div>
 				</div>
-			 </div>
+			</div>
 		</div>
 	</body>
 	<!--- page script--->
 	<script src="js/index.js"></script>
+	<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- 包括所有已编译的插件 -->
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </html>

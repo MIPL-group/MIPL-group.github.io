@@ -172,10 +172,10 @@ var vm = new Vue(
                 },
                 {
                     "ranking": "2",
-                    "name" : "Harvard Tang",
+                    "name" : "Satinder P. Singh",
                     "Pubs": 19,
                     "Adj": 3.56,
-                    "href": "https://www.andreiod.cmu.edu/user/Harvard Tang"
+                    "href": "http://web.eecs.umich.edu/~baveja"
                 },
                 {
                     "ranking": "3",
@@ -196,21 +196,21 @@ var vm = new Vue(
                     "name" : "Xinyu Wang",
                     "Pubs": 33,
                     "Adj": 12.9,
-                    "href": "http://www.cs.cmu.edu/~sandholm"
+                    "href": "https://web.eecs.umich.edu/~xwangsd/#personal"
                 },
                 {
                     "ranking": "2",
-                    "name" : "Baiyu Yang",
+                    "name" : "Jason J. Corso",
                     "Pubs": 19,
                     "Adj": 3.7,
-                    "href": "https://www.andrew.cmu.edu/user/feif"
+                    "href": "http://web.eecs.umich.edu/~jjcorso"
                 },
                 {
                     "ranking": "3",
-                    "name" : "Pengyuan Huang",
+                    "name" : "David F. Fouhey",
                     "Pubs": 10,
                     "Adj": 2.6,
-                    "href": "http://www.ri.cmu.edu/person.html?person_id=689"
+                    "href": "https://web.eecs.umich.edu/~fouheyhttps://web.eecs.umich.edu/~xwangsd/#personal"
                 }
             ]
         }
@@ -283,14 +283,14 @@ var vm = new Vue(
                     "name" : "Xinyu Wang",
                     "Pubs": 33,
                     "Adj": 12.9,
-                    "href": "http://www.cs.cmu.edu/~sandholm"
+                    "href": "https://web.eecs.umich.edu/~xwangsd/#personal"
                 },
                 {
                     "ranking": "2",
-                    "name" : "Baiyu Yang",
+                    "name" : "Andrew Owens",
                     "Pubs": 19,
                     "Adj": 3.7,
-                    "href": "https://www.andrew.cmu.edu/user/feif"
+                    "href": "http://andrewowens.com/"
                 },
                 {
                     "ranking": "3",

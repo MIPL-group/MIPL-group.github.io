@@ -10,7 +10,7 @@ var faculty_el = Vue.component('faculty', {
 		    </td>
 		    <td>
 		        <small>
-		            <a title="Click for author's home page." target="_blank" href="faculty[1].href" onclick="trackOutboundLink('faculty[1].href', true); return false;">
+		            <a title="Click for author's home page." target="_blank" :href="faculty[1].href" @onclick="trackOutboundLink('faculty[1].href', true); return false;">
 		                {{faculty[0]}}
 		            </a>&nbsp;
 		        </small>

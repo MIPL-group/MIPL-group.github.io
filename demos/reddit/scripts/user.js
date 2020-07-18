@@ -47,20 +47,20 @@ function page(user) {
         return (
             `<div role="menu" class="TMMvbwyeh9yuHKmQWHrE3">
         <div aria-live="assertive" aria-label=""></div>
-        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">Reddit Feeds</div>
-        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="A.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Home</span></a>
-        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Popular</span></a>
-        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">All</span></a>
-        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Top</span></a>
+        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">Reddit Feeds<br></div>
+        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="A.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Home<br></span></a>
+        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Popular<br></span></a>
+        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">All<br></span></a>
+        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Top<br></span></a>
         <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">My Communities</div>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2qh22" role="menuitem" tabindex="-1" aria-label="r/ps4" href="A_ps4.html" ><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/ps4</span></a>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2rh_22" role="menuitem" tabindex="-1" aria-label="r/xboxobe" href="A_xboxone.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/xboxone</span></a>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2p_h22" role="menuitem" tabindex="-1" aria-label="r/switch" href="A_switch.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/switch</span></a>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2c_r22" role="menuitem" tabindex="-1" aria-label="r/gameboy" href="A_gameboy.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/gameboy</span></a>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2q_h22" role="menuitem" tabindex="-1" aria-label="r/wii" href="A_wii.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/wii</span></a>
-        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">Other</div>
-        <a id="focus-CreatePost" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/submit" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Coins</span></a>
-        <a id="focus-CreatePost" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/submit" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Premium</span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2qh22" role="menuitem" tabindex="-1" aria-label="r/ps4" href="A_ps4.html" ><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/ps4<br></span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2rh_22" role="menuitem" tabindex="-1" aria-label="r/xboxobe" href="A_xboxone.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/xboxone<br></span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2p_h22" role="menuitem" tabindex="-1" aria-label="r/switch" href="A_switch.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/switch<br></span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2c_r22" role="menuitem" tabindex="-1" aria-label="r/gameboy" href="A_gameboy.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/gameboy<br></span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2q_h22" role="menuitem" tabindex="-1" aria-label="r/wii" href="A_wii.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/wii<br></span></a>
+        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">Other<br></div>
+        <a id="focus-CreatePost" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/submit" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Coins<br></span></a>
+        <a id="focus-CreatePost" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/submit" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Premium<br></span></a>
         </div>`
         );
     }
@@ -68,21 +68,21 @@ function page(user) {
         return (
             `<div role="menu" class="TMMvbwyeh9yuHKmQWHrE3">
         <div aria-live="assertive" aria-label=""></div>
-        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">Reddit Feeds</div>
-        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="B.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Home</span></a>
-        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Popular</span></a>
-        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">All</span></a>
-        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Top</span></a>
-        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">My Communities</div>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2qh22" role="menuitem" tabindex="-1" aria-label="r/NBA" href="B_nba.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/NBA</span></a>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2rah_22" role="menuitem" tabindex="-1" aria-label="r/WNBA" href="B_wnba.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/WNBA</span></a>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2p_ch22" role="menuitem" tabindex="-1" aria-label="r/MMA" href="B_mma.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/MMA</span></a>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2c_qr22" role="menuitem" tabindex="-1" aria-label="r/WWE" href="B_wwe.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/WWE</span></a>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2q_th22" role="menuitem" tabindex="-1" aria-label="r/NFL" href="B_nfl.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/NFL</span></a>
-        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2q_ph22" role="menuitem" tabindex="-1" aria-label="r/NBL" href="B_nbl.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/NBL</span></a> 
-        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">Other</div>
-        <a id="focus-CreatePost" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/submit" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Coins</span></a>
-        <a id="focus-CreatePost" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/submit" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Premium</span></a>
+        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">Reddit Feeds<br></div>
+        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="B.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Home<br></span></a>
+        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Popular<br></span></a>
+        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">All<br></span></a>
+        <a id="focus-Home" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Top<br></span></a>
+        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">My Communities<br></div>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2qh22" role="menuitem" tabindex="-1" aria-label="r/NBA" href="B_nba.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/NBA<br></span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2rah_22" role="menuitem" tabindex="-1" aria-label="r/WNBA" href="B_wnba.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/WNBA<br></span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2p_ch22" role="menuitem" tabindex="-1" aria-label="r/MMA" href="B_mma.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/MMA<br></span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2c_qr22" role="menuitem" tabindex="-1" aria-label="r/WWE" href="B_wwe.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/WWE<br></span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2q_th22" role="menuitem" tabindex="-1" aria-label="r/NFL" href="B_nfl.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/NFL<br></span></a>
+        <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2q_ph22" role="menuitem" tabindex="-1" aria-label="r/NBL" href="B_nbl.html"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/NBL<br></span></a> 
+        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">Other<br></div>
+        <a id="focus-CreatePost" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/submit" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Coins<br></span></a>
+        <a id="focus-CreatePost" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC " tabindex="-1" aria-label="/submit" href="../signup.html"><span class="_1nBP1OfpQDgTmzRFqaVult">Premium<br></span></a>
         </div>`
         );
     }

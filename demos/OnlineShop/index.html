@@ -34,10 +34,11 @@
 					<el-col :span="4"><p></p></el-col>
 					<el-col :span="16">
 						<!-- progress bar -->
-						<el-steps :active="main_step_progress" finish-status="success" align-center>
+						<el-steps :active="main_step_progress" finish-status="result" align-center>
 							<el-step title="User Information"></el-step>
 							<el-step title="Products"></el-step>
-							<el-step title="Success"></el-step>
+							<el-step title="Order Info"></el-step>
+							<el-step title="result"></el-step>
 						</el-steps>
 						<!-- multiple tabs -->
 						<el-tabs v-model="tab_active_tab">
@@ -138,7 +139,6 @@ order_form.tmp_product_name=order_form.tmp_product_type=order_form.tmp_product_i
 								</el-row>
 							</el-tab-pane>
 							<el-tab-pane disabled  name="tab_success">
-								<h2>Success!</h2>
 								<h2>
 									Order Information:
 								</h2>
@@ -169,7 +169,19 @@ order_form.tmp_product_name=order_form.tmp_product_type=order_form.tmp_product_i
 											label="Count">
 									</el-table-column>
 								</el-table>
-								<el-button type="primary" @click="()=>{this.tab_active_tab='tab_products';this.main_step_progress--}">< Previous</el-button>
+								<el-row>
+									<el-col :span="6">
+										<el-button type="primary" @click="()=>{this.tab_active_tab='tab_products';this.main_step_progress--}">< Previous</el-button>
+									</el-col>
+									<el-col :span="6" :offset="12">
+										<el-button type="primary" @click="()=>{this.tab_active_tab='tab_result';this.main_step_progress++}"> Submit </el-button>
+									</el-col>
+								</el-row>
+							</el-tab-pane>
+							<el-tab-pane disabled  name="tab_result">
+								<h2>
+									Success!
+								</h2>
 							</el-tab-pane>
 						</el-tabs>
 					</el-col>

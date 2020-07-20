@@ -12,6 +12,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css" rel="stylesheet" />
     <title>Job Search</title>
     <style>
+        .sent-text {
+            display: none;
+        }
         .applied-text {
             display: none;
         }
@@ -120,6 +123,9 @@
         </div>
         <div class="alert alert-success applied-text" id="applied-text" role="alert">
             You've successfully applied!
+        </div>
+        <div class="alert alert-success sent-text" id="sent-text" role="alert">
+            message sent!
         </div>
         <div class="modal fade" id="appModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -267,6 +273,9 @@
                                 <button type="button" class="btn btn-success">Save</button>
                                 <button type="button" class="btn btn-info" data-toggle="modal"
                                     data-target="#appModal">Apply</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="@mdo">Message Me</button>
+                                <button onclick="location.href = 'https://mipl-group.github.io/benchmark-mailbox/';" type="button" class="btn btn-secondary">Email</button>
                                 <p class="mt-3">Responsibilities:
 
                                     1. Specific responsibilities vary by project area
@@ -292,6 +301,9 @@
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#appModal">
                                     Apply
                                 </button>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="@mdo">Message Me</button>
+                                <button onclick="location.href = 'https://mipl-group.github.io/benchmark-mailbox/';" type="button" class="btn btn-secondary">Email</button>
                                 <p class="mt-3">As a Data Analyst on the Supply Chain Automation team, you will analyze
                                     and
                                     visualize data to help with the successful launch and scale of our various programs
@@ -316,6 +328,9 @@
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#appModal">
                                     Apply
                                 </button>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="@mdo">Message Me</button>
+                                <button onclick="location.href = 'https://mipl-group.github.io/benchmark-mailbox/';" type="button" class="btn btn-secondary">Email</button>
                                 <p class="mt-3">As a Data Analyst on the Supply Chain Automation team, you will analyze
                                     and
                                     visualize data to help with the successful launch and scale of our various programs
@@ -340,6 +355,9 @@
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#appModal">
                                     Apply
                                 </button>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="@mdo">Message Me</button>
+                                <button onclick="location.href = 'https://mipl-group.github.io/benchmark-mailbox/';" type="button" class="btn btn-secondary">Email</button>
                                 <p class="mt-3">As a Data Analyst on the Supply Chain Automation team, you will analyze
                                     and
                                     visualize data to help with the successful launch and scale of our various programs
@@ -364,6 +382,9 @@
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#appModal">
                                     Apply
                                 </button>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="@mdo">Message Me</button>
+                                <button onclick="location.href = 'https://mipl-group.github.io/benchmark-mailbox/';" type="button" class="btn btn-secondary">Email</button>
                                 <p class="mt-3">As a Data Analyst on the Supply Chain Automation team, you will analyze
                                     and
                                     visualize data to help with the successful launch and scale of our various programs
@@ -388,6 +409,9 @@
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#appModal">
                                     Apply
                                 </button>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="@mdo">Message Me</button>
+                                <button onclick="location.href = 'https://mipl-group.github.io/benchmark-mailbox/';" type="button" class="btn btn-secondary">Email</button>
                                 <p class="mt-3">As a Data Analyst on the Supply Chain Automation team, you will analyze
                                     and
                                     visualize data to help with the successful launch and scale of our various programs
@@ -412,6 +436,9 @@
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#appModal">
                                     Apply
                                 </button>
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="@mdo">Message Me</button>
+                                <button onclick="location.href = 'https://mipl-group.github.io/benchmark-mailbox/';" type="button" class="btn btn-secondary">Email</button>
                                 <p class="mt-3">As a Data Analyst on the Supply Chain Automation team, you will analyze
                                     and
                                     visualize data to help with the successful launch and scale of our various programs
@@ -428,7 +455,37 @@
                 </div>
             </div>
         </div>
-
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                <input value="recruiter@email.com" type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="(function(){
+                            document.getElementById('sent-text').style.display = 'block';
+                        })()">Send message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">

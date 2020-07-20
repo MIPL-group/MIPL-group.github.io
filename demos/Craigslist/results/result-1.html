@@ -32,9 +32,9 @@
             <h2 class="mt-5">2012 Toyota Camry LE Low Miles - $9600 (Ann Arbor)</h2>
         </div>
         <div class="row">
-        <div class="alert alert-success sent-text" id="sent-text" role="alert">
-        message sent!
-    </div>
+            <div class="alert alert-success sent-text" id="sent-text" role="alert">
+                message sent!
+            </div>
         </div>
         <div class="row">
             <div class="input-group-append">
@@ -47,11 +47,13 @@
             <div class="input-group-append">
                 <button id="email-btn" class="btn btn-secondary mb-3">Email</button>
             </div>
-            <a href="https://mipl-group.github.io/benchmark-mailbox/" target="_blank" class="ml-3" id="email">cars@umich.edu  (open in new tab)</a>
+            <a href="https://mipl-group.github.io/benchmark-mailbox/" target="_blank" class="ml-3"
+                id="email">cars@umich.edu (open in new tab)</a>
             <a href="https://mipl-group.github.io/benchmark-mailbox/" class="ml-3" id="email-2">cars@umich.edu</a>
         </div>
         <div class="row mb-3">
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Message Me</button>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
+                data-whatever="@mdo">Message Me</button>
         </div>
         <div class="row">
             <img src="./img1.jpg" class="img-fluid" alt="">
@@ -67,36 +69,37 @@
 
                 Ask for 9600. No Low ballers. Email me if you are interested. Serious buyer only.</p>
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input value="buymycar@email.com" type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="(function(){
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                <input value="buymycar@email.com" type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="(function(){
                             document.getElementById('sent-text').style.display = 'block';
                         })()">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">

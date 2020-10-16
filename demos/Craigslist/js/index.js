@@ -22,14 +22,24 @@ var vm = new Vue(
 			  },
 			dataset: [],
 			results: [],
+			result: null,
 			"keyword": "none",
 			"show_search_area": true,
 			"show_result_area": false,
 			show_detailed_area: false,
 			curr_page_results:[],
-			chosen_page: 0
+			chosen_page: 0,
+			show_sent: false,
+			show_phone: false,
+			show_email: false,
+			show_filter_set: false
 		},
         methods: {
+			show_details(result){
+				this.result = result;
+				this.show_result_area = false;
+				this.show_detailed_area = true;
+			},
 			page_nav(page) {
 				this.chosen_page = page;
 				this.curr_page_results = this.results[this.chosen_page];
@@ -140,6 +150,7 @@ var vm = new Vue(
 				  }
 				}
 				this.dataset = curr_results;
+				this.show_filter_set = true;
 				//console.log(this.dataset);
 			  },
 			  generateResults() {

@@ -1,0 +1,19 @@
+{
+  "actions": [
+    "click /html/body/div[1]/div/div[1]/p",
+    "click /html/body/div[1]/div/div[2]/p",
+    "click /html/body/div[1]/div/div[3]/p",
+    "click /html/body/div[2]/div/div[1]/p",
+    "click /html/body/div[2]/div/div[2]/p",
+    "click /html/body/div[2]/div/div[3]/p"
+  ],
+  "doms": [
+    "0.html",
+    "1.html",
+    "2.html",
+    "3.html",
+    "4.html"
+  ],
+  "number_of_actions": 5,
+  "name": "test"
+}

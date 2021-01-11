@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Trace Testing</title>
+		<!--jquery-->
+		<script src="js/lib/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+		<!--jszip-->
+		<script src="js/lib/jszip.js" type="text/javascript" charset="utf-8"></script>
+		<!--Vue.js-->
+		<script src="js/lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<!--Page stylesheet-->
+		<link rel="stylesheet" href="css/index.css">
+
+	</head>
+	<body>
+		<h1 class="d-flex justify-content-center">Trace Testing Environment</h1>
+		<div id="app">
+			<div style="text-align: center">
+				color information:<br>
+				<span style="background-color:#d76f6a;width: 10px;height: 10px">No correct prediction</span>
+				<span style="background-color:#51a7e7;width: 10px;height: 10px">Has correct prediction</span>
+				<span style="background-color:#97d992;width: 10px;height: 10px">Is correct prediction</span>
+				<span style="background-color:#bbbbbb;width: 10px;height: 10px">Not predictable</span>
+			</div>
+			<div class="row" style="height: auto">
+				<!-- traces -->
+				<div class="col-2">
+					<table class="trace-table">
+						<tr>
+							<th class="table-header">
+								Trace Name
+							</th>
+						</tr>
+						<tr v-for="(trace,index) in traces" :key="trace.trace_name">
+							<td>
+								<div class="trace-item" :class="{'selected':current_selected_trace_index === index}" @click="select_trace(index)">
+									<div style="text-align: center">{{trace.trace_name}}</div>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" v-bind:aria-valuenow="progress[index]"
+											 aria-valuemin="0" aria-valuemax="100" v-bind:style="'width:'+ progress[index]+'%;'">
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="trace-item">
+								<div class="trace-item">
+									<button id="upload_btn" class="btn-primary" @click="upload_file_button_click" style="width: 100%;height: 100%">upload</button>
+									<input id="upload_file_hidden" type="file"  style="display:none" multiple>
+								</div>
+							</td>
+						</tr>
+
+					</table>
+
+				</div>
+				<!-- display for a single trace: trace details-->
+				<div class="col-4">
+					<table class="trace-table">
+						<tr>
+							<th class="table-header">
+								Trace Content
+							</th>
+						</tr>
+						<tr class="action-item" v-for="(action,index) in selected_trace.action_list"
+							:class="{'selected':current_selected_action_index === index}"
+							:style="{'background-color':get_status_color[index]}" @click="select_action(index)">
+							<td>{{index}} {{action.toString()}}</td>
+						</tr>
+					</table>
+				</div>
+				<!-- display for a single action: prediction details-->
+				<div class="col-6">
+					<table class="trace-table">
+						<tr>
+							<th class="table-header">
+								Details
+							</th>
+						</tr>
+					</table>
+					<div v-if="current_selected_action_index!==-1">
+						<div>
+							<h3>Status: {{get_status_text}}</h3>
+							<table>
+								<tr>
+									<th>
+										Predictions
+									</th>
+								</tr>
+								<tr v-for="(prediction,index) in analyze_results[current_selected_trace_index].predicted_actions[current_selected_action_index]">
+									<td>
+										{{index}}
+										<br />
+										<pre>{{prediction.toString()}}</pre>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div>
+							<table>
+								<tr>
+									<th>
+										Programs
+									</th>
+								</tr>
+								<tr v-for="(prediction,index) in analyze_results[current_selected_trace_index].predicted_programs[current_selected_action_index]">
+									<td>
+										{{index}}
+										<br />
+										<pre>{{prediction.toString()}}</pre>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/testing.js" type="module" charset="utf-8"></script>
+</html>

@@ -1,0 +1,37 @@
+li{list-style-type: none}
+
+.selected{
+    border: 3px solid red !important;
+}
+
+.trace-table{
+    width: 100%;
+    border-collapse:collapse;
+    border: black solid 1px;
+}
+
+.table-header{
+    width: 100%;
+    background-color: beige;
+    border: black solid 1px;
+    border-collapse:collapse;
+    text-align: center;
+}
+
+.trace-item{
+    width: 100%;
+    margin: auto;
+    min-height: 60px;
+    border: black solid 1px;
+    border-collapse:collapse;
+}
+
+.action-item{
+    width: 100%;
+    margin: auto;
+    min-height: 30px;
+    border: black solid 1px;
+    border-collapse:collapse;
+    word-break: break-all;
+}
+
